@@ -265,7 +265,7 @@ SITE_NAME = "testauth"
 DEBUG = False
 
 # Add any additional apps to this list.
-INSTALLED_APPS += ["example"]
+INSTALLED_APPS += ["sso_access_forums"]
 
 # Enter credentials to use MySQL/MariaDB. Comment out to use sqlite3
 """

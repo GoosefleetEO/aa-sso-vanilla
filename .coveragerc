@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = example
+source = sso_access_forums
 
 [report]
 exclude_lines =
