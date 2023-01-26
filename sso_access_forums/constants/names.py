@@ -1,3 +1,3 @@
 class Names:
-    app_name_raw = "sso_access_forums"
-    app_url = app_name_raw
+    app_url = "sso"
+    app_name_raw = f"{app_url}-access-forums"

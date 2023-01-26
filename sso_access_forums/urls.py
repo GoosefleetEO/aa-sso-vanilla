@@ -1,10 +1,10 @@
 from django.urls import path
 
 from . import views
-from .constants import Constants
+from .constants import Names
 
-app_name = Constants.app_url
+app_name = Names.app_url
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path(f'/{app_name}', views.sso, name=app_name),
 ]
