@@ -18,11 +18,11 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     license="MIT",
-    description="Example plugin app for Alliance Auth",
+    description="SSO auth plugin for WINGS",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="John Doe",
-    author_email="john.doe@example.com",
+    author="Tsao Nima",
+    author_email="tsao.nima.ed@gmail.com",
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Django",
@@ -38,5 +38,5 @@ setup(
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     ],
     python_requires="~=3.7",
-    install_requires=["allianceauth>=2.9"],
+    install_requires=["allianceauth>=2.9", "python-decouple"],
 )

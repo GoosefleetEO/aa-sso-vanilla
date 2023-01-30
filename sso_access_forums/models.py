@@ -7,7 +7,6 @@ class General(models.Model):
     """Stores info about individual users.
     """
     
-
     class Meta:
         """Stores metadata about the table in general.
 

@@ -1,10 +1,11 @@
 from django.http import HttpRequest
+from ...app_settings import JSCONNECT_CLIENT_ID, JSCONNECT_SECRET
 
 class ServerContext:
-    def __init__(self, user_data, client_id, secret):
+    def __init__(self, user_data):
         self.user_data = user_data
-        self.client_id = client_id
-        self.secret = secret
+        self.client_id = JSCONNECT_CLIENT_ID
+        self.secret = JSCONNECT_SECRET
 
     @classmethod
     def get_server_context(cls, request: HttpRequest):
@@ -13,7 +14,7 @@ class ServerContext:
         if request.user.is_authenticated():
             cls._populate_user_data(user_data)
 
-        return cls(user_data, cls._jsconnect_client_id(), cls._jsconnect_secret())
+        return cls(user_data)
 
     @classmethod
     def _populate_user_data(cls, request: HttpRequest, user_data: dict):
@@ -41,13 +42,5 @@ class ServerContext:
     @classmethod
     def get_user_roles(cls, user):
         # Look at AA's admin panel docs for what to set for this.
-        raise NotImplementedError()
-
-    @classmethod
-    def _jsconnect_client_id(cls):
-        raise NotImplementedError()
-    
-    @classmethod
-    def _jsconnect_secret(cls):
         raise NotImplementedError()
 
