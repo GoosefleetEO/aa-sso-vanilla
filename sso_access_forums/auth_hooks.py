@@ -16,7 +16,7 @@ class SsoPluginItem(MenuItemHook):
             self,
             _(Names.app_name_raw),
             "fas fa-cube fa-fw",
-            f"{Constants.app_url}:index",
+            f"{Names.app_url}:index",
             navactive=[f"{Names.app_url}:"],
         )
 
